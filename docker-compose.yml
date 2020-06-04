@@ -1,0 +1,8 @@
+version: '2.0'
+services:
+  manual:
+    build: .
+    volumes:
+    - ../lustre-manual:/code
+      #volumes:
+      #logvolume01: {}
