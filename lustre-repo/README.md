@@ -25,6 +25,17 @@ Check that repo available
 curl localhost:8080
 ```
 
+# Create custom images with repos
+
+Get list of repo configurations files
+```
+ls build/repos/
+wcfuture.repo  wcpatchless.repo  wcrelease.repo
+```
+Specify image tag and repo config file
+```
+run/create_repo_image.sh 2.13.0 wcfuture.repo
+```
 
 # Directory structure
 build   - build images

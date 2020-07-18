@@ -1,5 +1,8 @@
+#!/bin/bash
 # create image
 # get script dir
 
 build_dir=$PWD/build/
-docker build -t lurepo $build_dir
+tag=${1:-default}
+repofile=${2:-wcrelease.repo}
+docker build --build-arg REPO_CONFIG_FILE=$repofile -t lurepo:$tag $build_dir

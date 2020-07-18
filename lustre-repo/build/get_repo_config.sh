@@ -1,6 +1,6 @@
 #!/bin/bash
 
-repo_config=/tmp/whamcloud.repo
+repo_config=${1:-/tmp/whamcloud.repo}
 
 reposync --config "$repo_config" --newest-only \
 --repoid=lustre-client \
